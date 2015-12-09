@@ -1,7 +1,4 @@
 machine:
-  node:
-    version: 0.12.5
-
   java:
     version: oraclejdk8
 
