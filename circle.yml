@@ -1,14 +1,16 @@
 machine:
   java:
     version: oraclejdk8
-  post:
-    - ./gradlew -Pprod bootRepackage -x test
 
 deployment:
   staging:
     branch: master
     heroku:
       appname: jhipster-fredrik
+
+test:
+    post:
+        - ./gradlew -Pprod bootRepackage -x test
 
 general:
   artifacts:
