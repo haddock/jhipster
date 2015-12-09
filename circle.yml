@@ -1,6 +1,8 @@
 machine:
   java:
     version: oraclejdk8
+  post:
+    - ./gradlew -Pprod bootRepackage -x test
 
 deployment:
   staging:
