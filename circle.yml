@@ -5,8 +5,6 @@ machine:
 deployment:
   staging:
     branch: master
-    #heroku:
-      #appname: jhipster-fredrik
     commands:
         - heroku plugins:install https://github.com/heroku/heroku-deploy
         - heroku deploy:jar --app jhipster-fredrik --jar build/libs/*.war
