@@ -6,4 +6,4 @@ deployment:
   staging:
     branch: master
     heroku:
-      appname: morning-cliffs-1767
+      appname: jhipster-fredrik
