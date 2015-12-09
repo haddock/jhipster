@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "jhipster",
+    "packageName": "se.valtech",
+    "packageFolder": "se/valtech",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "elasticsearch",
+    "useSass": false,
+    "buildTool": "gradle",
+    "frontendBuilder": "grunt",
+    "enableTranslation": false,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "3e61efdc1388791f7202eb4fe16f736dabc072c9",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}
