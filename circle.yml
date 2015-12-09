@@ -7,6 +7,8 @@ deployment:
     branch: master
     heroku:
       appname: jhipster-fredrik
+    commands:
+        - heroku deploy:jar --jar build/libs/*.war
 
 test:
     post:
