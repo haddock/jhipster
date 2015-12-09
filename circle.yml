@@ -1,11 +1,35 @@
+general:
+  build_dir: .
+
+  artifacts:
+    - "build/reports/tests"
+
 machine:
+  node:
+    version: 0.12.5
+
   java:
     version: oraclejdk8
-  node:
-    version: 0.11.14
 
 deployment:
   staging:
     branch: master
     heroku:
       appname: jhipster-fredrik
+
+dependencies:
+    cache_directories:
+        - "src/main/webapp/bower_components"
+
+test:
+ pre:
+   - npm install -g bower grunt-cli
+
+ override:
+   - gradle clean test
+   - grunt test
+
+ post:
+   - ls -l build/libs
+   - mkdir -p $CIRCLE_TEST_REPORTS/junit/
+   - find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
