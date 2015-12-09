@@ -9,7 +9,7 @@ deployment:
       #appname: jhipster-fredrik
     commands:
         - heroku plugins:install https://github.com/heroku/heroku-deploy
-        - heroku deploy:jar --jar build/libs/*.war
+        - heroku deploy:jar --app jhipster-fredrik --jar build/libs/*.war
 
 test:
     post:
