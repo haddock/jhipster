@@ -1,6 +1,8 @@
 machine:
   java:
     version: oraclejdk8
+  node:
+    version: 0.11.14
 
 deployment:
   staging:
